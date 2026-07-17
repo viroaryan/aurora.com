@@ -14,14 +14,14 @@ export default function Home() {
       <Header />
       <div className="grid-bg"></div>
 
-      {/* HERO SECTION */}
+      {/* 1. HERO SECTION */}
       <section className="max-w-[1000px] mx-auto px-6 pt-36 pb-20 text-center relative">
         <div className="inline-flex items-center gap-2 bg-[#fafafa] border border-[#eaeaea] px-[14px] py-[6px] rounded-full text-xs font-semibold text-[#444] mb-6">
           <span className="bg-black text-white px-2 py-[2px] rounded-full text-[10px]">New</span>
           <span>Aurora v1.0 is officially released</span>
         </div>
         
-        <h1 className="text-[3.2rem] md:text-[6rem] font-extrabold tracking-[-0.06em] leading-[1.05] mb-7 select-none">
+        <h1 className="text-[3.2rem] md:text-[6rem] font-extrabold tracking-[-0.06em] leading-[1.05] mb-7 select-none text-black">
           Version Control.<br />
           <span className="bg-gradient-to-r from-[#7928ca] via-[#0070f3] to-[#00dfd8] bg-clip-text text-transparent">
             At the speed of thought.
@@ -51,9 +51,34 @@ export default function Home() {
         />
       </div>
 
-      {/* FEATURES GRID */}
-      <section id="features" className="max-w-[1200px] mx-auto px-6 mb-[140px]">
-        <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-4 text-center">
+      {/* 2. THE MOTIVATION SECTION */}
+      <section className="max-w-[1200px] mx-auto px-6 mb-[140px] border-t border-[#eaeaea] pt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-6 text-black leading-tight">
+              Why we built Aurora.
+            </h2>
+            <p className="text-lg text-[#666] mb-6 leading-relaxed">
+              Version control is the lifeblood of coding, yet Git remains needlessly complex. Staging areas, merge blocks, and detached branch pointers continuously interrupt developers.
+            </p>
+            <p className="text-lg text-[#666] leading-relaxed">
+              Our motive is simple: **keep developers in their flow state**. Aurora replaces legacy terminal commands with automated file-tracking daemons and instant time-travel logs, making version control completely painless.
+            </p>
+          </div>
+          <div className="bg-[#fafafa] border border-[#eaeaea] rounded-[14px] p-8">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-black mb-4">Core Philosophy</h4>
+            <ul className="flex flex-col gap-4 list-none pl-0">
+              <li className="flex gap-3 text-[#444] text-base leading-relaxed"><span className="text-black font-bold">✓</span> **Focus on Code**: No manual staging trees required.</li>
+              <li className="flex gap-3 text-[#444] text-base leading-relaxed"><span className="text-black font-bold">✓</span> **Safety Nets**: Automatic background saves ensure nothing is lost.</li>
+              <li className="flex gap-3 text-[#444] text-base leading-relaxed"><span className="text-black font-bold">✓</span> **Zero Setup**: A single Go binary that works immediately out of the box.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. BENTO GRID FEATURES */}
+      <section id="features" className="max-w-[1200px] mx-auto px-6 mb-[140px] border-t border-[#eaeaea] pt-24">
+        <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-4 text-center text-black">
           {t('features-title')}
         </h2>
         <p className="text-[1.15rem] text-[#666] text-center max-w-[650px] mx-auto mb-16 leading-relaxed">
@@ -65,7 +90,7 @@ export default function Home() {
           {/* Wide Bento Card */}
           <div className="md:col-span-2 border border-[#eaeaea] rounded-[14px] p-10 bg-white hover:shadow-md hover:border-black transition-all flex flex-col justify-between">
             <div>
-              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em]">Integrated Go-Git Engine</h3>
+              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em] text-black">Integrated Go-Git Engine</h3>
               <p className="text-[#666] text-[0.95rem] leading-relaxed">
                 Aurora does not require local Git or third-party client dependencies. With its built-in Go Git implementation, it securely communicates with remote repositories natively.
               </p>
@@ -86,7 +111,7 @@ export default function Home() {
           {/* Tall Bento Card */}
           <div className="border border-[#eaeaea] rounded-[14px] p-10 bg-white hover:shadow-md hover:border-black transition-all flex flex-col justify-between md:row-span-2">
             <div>
-              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em]">Instant Time Travel</h3>
+              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em] text-black">Instant Time Travel</h3>
               <p className="text-[#666] text-[0.95rem] leading-relaxed">
                 Catastrophic errors are a thing of the past. Aurora lets you rewind your entire codebase to any exact minute in time.
               </p>
@@ -101,7 +126,7 @@ export default function Home() {
           {/* Regular Bento Card 1 */}
           <div className="border border-[#eaeaea] rounded-[14px] p-10 bg-white hover:shadow-md hover:border-black transition-all flex flex-col justify-between">
             <div>
-              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em]">Auto-Pilot Mode</h3>
+              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em] text-black">Auto-Pilot Mode</h3>
               <p className="text-[#666] text-[0.95rem] leading-relaxed">
                 Activate persistent tracking. Aurora watches your working directory, automatically saving safe snapshots as you edit code.
               </p>
@@ -111,7 +136,7 @@ export default function Home() {
           {/* Regular Bento Card 2 */}
           <div className="border border-[#eaeaea] rounded-[14px] p-10 bg-white hover:shadow-md hover:border-black transition-all flex flex-col justify-between">
             <div>
-              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em]">Deep Integration</h3>
+              <h3 className="text-xl font-bold mb-3 tracking-[-0.03em] text-black">Deep Integration</h3>
               <p className="text-[#666] text-[0.95rem] leading-relaxed">
                 Native integration with Windows Explorer, macOS Finder, and VS Code. Everything works out of the box.
               </p>
@@ -121,10 +146,98 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COMPARISON MATRIX */}
+      {/* 4. DYNAMIC COMMAND CATALOG SECTION */}
+      <section className="max-w-[1200px] mx-auto px-6 mb-[140px] border-t border-[#eaeaea] pt-24">
+        <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-4 text-center text-black">
+          The Aurora CLI Toolbox
+        </h2>
+        <p className="text-[1.15rem] text-[#666] text-center max-w-[650px] mx-auto mb-16 leading-relaxed">
+          Ten simple commands to manage your entire repository timeline.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="border border-[#eaeaea] rounded-[8px] p-6 bg-[#fafafa]">
+            <code className="text-[#7928ca] font-mono font-bold text-sm">aurora start</code>
+            <p className="text-[#666] text-sm mt-3">Initializes a new project metadata structure in the active folder.</p>
+          </div>
+          <div className="border border-[#eaeaea] rounded-[8px] p-6 bg-[#fafafa]">
+            <code className="text-[#7928ca] font-mono font-bold text-sm">aurora track [file]</code>
+            <p className="text-[#666] text-sm mt-3">Adds a file to the tracking index to include in future snapshots.</p>
+          </div>
+          <div className="border border-[#eaeaea] rounded-[8px] p-6 bg-[#fafafa]">
+            <code className="text-[#7928ca] font-mono font-bold text-sm">aurora save [msg]</code>
+            <p className="text-[#666] text-sm mt-3">Saves a safe cryptographic snapshot of all tracked changes.</p>
+          </div>
+          <div className="border border-[#eaeaea] rounded-[8px] p-6 bg-[#fafafa]">
+            <code className="text-[#7928ca] font-mono font-bold text-sm">aurora history</code>
+            <p className="text-[#666] text-sm mt-3">Displays your project's clean branch commit timeline.</p>
+          </div>
+          <div className="border border-[#eaeaea] rounded-[8px] p-6 bg-[#fafafa]">
+            <code className="text-[#7928ca] font-mono font-bold text-sm">aurora rewind [mins]</code>
+            <p className="text-[#666] text-sm mt-3">Travel back in time dynamically by checking out historical logs.</p>
+          </div>
+          <div className="border border-[#eaeaea] rounded-[8px] p-6 bg-[#fafafa]">
+            <code className="text-[#7928ca] font-mono font-bold text-sm">aurora sync</code>
+            <p className="text-[#666] text-sm mt-3">Wraps metadata to trigger native VS Code VCS panels.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. SYSTEM ARCHITECTURE INTERACTIVE DISPLAY */}
+      <section className="max-w-[1200px] mx-auto px-6 mb-[140px] border-t border-[#eaeaea] pt-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-6 text-black leading-tight">
+              Cryptographic Integrity.
+            </h2>
+            <p className="text-lg text-[#666] mb-6 leading-relaxed">
+              Under the hood, Aurora utilizes a simplified Directed Acyclic Graph (DAG) state database. Files are hashed with SHA-256 for integrity and compressed with zlib.
+            </p>
+            <p className="text-lg text-[#666] leading-relaxed">
+              Every snapshot represents a full state lookup, removing the danger of branch detachment.
+            </p>
+            <Link href="/architecture" className="text-sm font-semibold text-black hover:text-[#0070f3] inline-flex items-center gap-2 mt-4">
+              Explore System Architecture &rarr;
+            </Link>
+          </div>
+          <div className="border border-[#eaeaea] rounded-[14px] overflow-hidden bg-white shadow-lg">
+            <img 
+              src="/assets/arch_diagram.jpg" 
+              alt="Systems Architecture Diagram" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CLOUD SYNC ILLUSTRATION */}
+      <section className="max-w-[1200px] mx-auto px-6 mb-[140px] border-t border-[#eaeaea] pt-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="border border-[#eaeaea] rounded-[14px] overflow-hidden bg-white shadow-lg lg:order-last">
+            <img 
+              src="/assets/cloud_sync.jpg" 
+              alt="Cloud Synchronization Mockup" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-6 text-black leading-tight">
+              Seamless Cloud Bridges.
+            </h2>
+            <p className="text-lg text-[#666] mb-6 leading-relaxed">
+              With our built-in Go-Git engine implementation, publishing repositories to remote host endpoints is completed securely over HTTPS.
+            </p>
+            <p className="text-lg text-[#666] leading-relaxed">
+              Push your code state safely without configuration files or external CLI dependencies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. COMPARISON MATRIX */}
       <section className="bg-[#fafafa] border-y border-[#eaeaea] py-24 px-6">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-4 text-center">
+          <h2 className="text-[2.2rem] md:text-[3.2rem] font-extrabold tracking-[-0.05em] mb-4 text-center text-black">
             Less commands. More flow.
           </h2>
           <p className="text-[1.15rem] text-[#666] text-center max-w-[650px] mx-auto mb-16 leading-relaxed">
@@ -152,7 +265,7 @@ export default function Home() {
 
             {/* Aurora Column */}
             <div className="border border-black bg-white rounded-[14px] p-10 shadow-xl">
-              <h4 className="text-lg font-bold mb-6 flex items-center gap-3">
+              <h4 className="text-lg font-bold mb-6 flex items-center gap-3 text-black">
                 Aurora VCS <span className="bg-black text-white px-2 py-0.5 rounded text-[11px]">Evolved</span>
               </h4>
               <div className="border-b border-[#eaeaea] py-4">
