@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999999;
+  --accents-4: #888888;
+  --accents-5: #666666;
+  --accents-6: #444444;
+  --accents-7: #333333;
+  --accents-8: #111111;
+  
+  --accent-teal: #00dfd8;
+  --accent-violet: #7928ca;
+  --accent-blue: #0070f3;
+  
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 14px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grid Background Effect */
+.grid-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 700px;
+  background-image: radial-gradient(var(--accents-2) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.7;
+  z-index: -1;
+  mask-image: linear-gradient(180deg, white, transparent);
+  -webkit-mask-image: linear-gradient(180deg, white, transparent);
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
